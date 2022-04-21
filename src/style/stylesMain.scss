@@ -1,0 +1,14 @@
+$background:white;
+$text-primary:black;
+$text-seconday:#0FCCCE;
+
+/*---------------nav bar---------------*/
+$background-navBar:#FAFAFA;
+
+:export{
+  background:$background;
+  text-primary:$text-primary;
+  text-seconday:$text-seconday;
+
+  background-navBar:$background-navBar;
+}
