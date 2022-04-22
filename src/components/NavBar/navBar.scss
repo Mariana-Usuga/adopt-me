@@ -2,7 +2,12 @@
 
 .header {
   &__nav{
-    background-color: $background-navBar;
+    background-color: $background-primary;
+    // &__input__show{
+    //   transform: translate(0, -450%);
+    //   position: absolute;
+    // transition: transform 0.3s ease;
+    // }
   }
   &__main {
     display: grid;
@@ -17,27 +22,37 @@
     }
   }
   &__ul {
-    transform: translate(-100%, 0);
+    transform: translate(0, -150%);
   }
   &__ul,
   &__ul--show {
-    z-index: 10;
-    transition: transform 0.3s ease;
+    padding-left: 0;
+    // text-align: right;
+    // z-index: 10;
     position: absolute;
+    transition: transform 0.3s ease;
     width: 100%;
-    background-color: #0FCCCE;
+    // background-color: #0FCCCE;
+    background-color: $background-primary;
+    margin-top: 0;
   }
   &__ul--show {
     // margin-top: 70px;
   }
-  &__li, &__li__signUp {
+  &__li, &__li__signUp, &__li__inputSearch {
     // background-color: #897ff1;
     list-style-type: none;
     padding: 20px;
+    // padding-left: 0;
     text-align: center;
     font-size: 1.2rem;
     // border-bottom: 0.3px solid;
     color: $color-secondary;
+    &__inputSearch{
+      // visibility: hidden;
+      display: none;
+      // list-style-type: none;
+    }
     a {
       color: white;
     }
@@ -70,7 +85,7 @@
 .background--show {
   // background-color: rgba(0, 0, 0, 0.7);
   // height: 300%;
-  width: 80%;
+  // width: 100%;
 }
 
 @media (min-width: 992px) {
@@ -92,7 +107,10 @@
     &__li {
       font-size: 20px;
       border-bottom: none;
-      background-color: transparent;
+      // background-color: transparent;
+      &__inputSearch{
+        display: unset;
+      }
     }
     &__bars {
       display: none;

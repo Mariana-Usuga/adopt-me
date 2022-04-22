@@ -1,20 +1,24 @@
-import { FaAngleDown } from 'react-icons/fa';
+import { FaAngleDown, FaCat, FaDog } from 'react-icons/fa';
 
 import './navBarSecondary.scss';
 
 const NavBarSecondary = () => (
-  <div className="container__category">
-    <div className="container__category__item">
-      <div>
+  <div className="category">
+    <div className="category__item">
+      <FaDog />
+      <div className="category__item__pet">
         Dogs
       </div>
-      <span className="container__category__down">
+      <span className="category__item__down">
         <FaAngleDown />
       </span>
     </div>
-    <div className="container__category__item">
-      Cats
-      <span className="container__category__down">
+    <div className="category__item">
+      <FaCat />
+      <div className="category__item__pet">
+        Cats
+      </div>
+      <span className="category__item__down">
         <FaAngleDown />
       </span>
     </div>

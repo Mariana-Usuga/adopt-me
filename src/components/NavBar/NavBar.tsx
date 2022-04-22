@@ -10,6 +10,14 @@ const NavBar = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const [showInputSearch, setShowInputSearch] = useState(false);
 
+  const showAndHide = (compo:string) => {
+    if (compo === 'input') {
+      setShowInputSearch(!showInputSearch);
+    } else {
+      setIsNavExpanded(!isNavExpanded);
+    }
+  };
+
   return (
     <nav className="header__nav">
       <div className="header__main">
@@ -19,27 +27,27 @@ const NavBar = () => {
         <button
           type="button"
           className="header__bars"
-          onClick={() => {
-            setShowInputSearch(!showInputSearch);
-          }}
+          onClick={() => showAndHide('input')}
         >
           {!showInputSearch ? <FaSistrix /> : <FaTimes />}
         </button>
         <button
           type="button"
           className="header__bars"
-          onClick={() => {
-            setIsNavExpanded(!isNavExpanded);
-          }}
+          onClick={() => showAndHide('')}
         >
           {!isNavExpanded ? <FaBars /> : <FaTimes />}
         </button>
       </div>
       {showInputSearch && <InputSearch />}
-      {/* <InputSearch /> */}
-      <ul
-        className={!isNavExpanded ? 'header__ul'
-          : 'header__ul--show background--show'}
+      {/* <div
+        className={showInputSearch ? 'header__nav__input__show' : ''}
+      >
+        <InputSearch />
+      </div> */}
+      {/* <div> */}
+      <ul className={!isNavExpanded ? 'header__ul'
+        : 'header__ul--show background--show'}
       >
         <li className="header__li">
           {/* <Link to="/" style={{ textDecoration: 'none' }}> */}
@@ -54,7 +62,7 @@ const NavBar = () => {
         <li className="header__li">
           Store
         </li>
-        <li className="header__li">
+        <li className="header__li__inputSearch">
           <InputSearch />
         </li>
         <li className="header__li">
@@ -66,7 +74,8 @@ const NavBar = () => {
           {/* </div> */}
         </li>
       </ul>
-      <div className="background" />
+      {/* </div> */}
+      {/* <div className="background" /> */}
     </nav>
   );
 };

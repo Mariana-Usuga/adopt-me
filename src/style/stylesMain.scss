@@ -5,12 +5,12 @@ $color-secondary:#606F7B;
 $color-third:white;
 
 /*---------------nav bar---------------*/
-$background-navBar:#FAFAFA;
+$background-primary:#FAFAFA;
 $color-faSearch:#DAE1E7;
 
 :export{
   color-primary:$color-primary;
   color-secondary:$color-secondary;
 
-  background-navBar:$background-navBar;
+  background-primary:$background-primary;
 }

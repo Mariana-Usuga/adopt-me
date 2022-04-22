@@ -1,17 +1,17 @@
 @import "../../style/stylesMain.scss";
 
-.container__category{
+.category{
   color:$color-secondary;
   display: flex;
-  justify-content:flex-start;
-  // margin: 10px;
-  // font-size: 1rem;
+  font-size: 1.2rem;
+  margin: 1% 0 0 6%;
+  // position: relative;
+  // position:absolute;
   &__item{
-    margin: 10px;
-      font-size: 1rem;
-
-  }
-  &__down{
-    padding: 20px 0 0 2px;
+    display: flex;
+    margin-right: 20px;
+    &__down{
+      margin: 5px 0 0 5px;
+    }
   }
 }
