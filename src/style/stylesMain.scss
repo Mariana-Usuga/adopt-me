@@ -1,14 +1,16 @@
-$background:white;
-$text-primary:black;
-$text-seconday:#0FCCCE;
+// $background:white;
+// $text-primary:black;
+$color-primary:#0FCCCE;
+$color-secondary:#606F7B;
+$color-third:white;
 
 /*---------------nav bar---------------*/
 $background-navBar:#FAFAFA;
+$color-faSearch:#DAE1E7;
 
 :export{
-  background:$background;
-  text-primary:$text-primary;
-  text-seconday:$text-seconday;
+  color-primary:$color-primary;
+  color-secondary:$color-secondary;
 
   background-navBar:$background-navBar;
 }

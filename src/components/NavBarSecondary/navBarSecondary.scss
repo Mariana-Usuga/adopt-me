@@ -1,0 +1,17 @@
+@import "../../style/stylesMain.scss";
+
+.container__category{
+  color:$color-secondary;
+  display: flex;
+  justify-content:flex-start;
+  // margin: 10px;
+  // font-size: 1rem;
+  &__item{
+    margin: 10px;
+      font-size: 1rem;
+
+  }
+  &__down{
+    padding: 20px 0 0 2px;
+  }
+}

@@ -1,0 +1,101 @@
+@import "../../style/stylesMain.scss";
+
+.header {
+  &__nav{
+    background-color: $background-navBar;
+  }
+  &__main {
+    display: grid;
+    grid-template-columns:70% 15% 15%;
+    padding: 20px;
+    // height: 70px;
+    &__logo{
+      color:$color-primary;
+      margin-left: 6%;
+      // background-color: #0FCCCE;
+      // width: 100%;
+    }
+  }
+  &__ul {
+    transform: translate(-100%, 0);
+  }
+  &__ul,
+  &__ul--show {
+    z-index: 10;
+    transition: transform 0.3s ease;
+    position: absolute;
+    width: 100%;
+    background-color: #0FCCCE;
+  }
+  &__ul--show {
+    // margin-top: 70px;
+  }
+  &__li, &__li__signUp {
+    // background-color: #897ff1;
+    list-style-type: none;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    // border-bottom: 0.3px solid;
+    color: $color-secondary;
+    a {
+      color: white;
+    }
+    &__signUp{
+      background: #0FCCCE;
+      border-radius: 5px;
+      color: $color-third;
+      // height: 20px;
+      // margin: 8px 0 10px 0;
+      // margin-top: 8px;
+    }
+  }
+  &__li:hover {
+    color: white;
+    a {
+      color: white;
+    }
+  }
+  &__bars {
+    font-size: 25px;
+    // margin-top: 8px;
+    border: none;
+    background-color: transparent;
+  }
+}
+.background {
+  transform: translate(-100%, 0);
+}
+.background,
+.background--show {
+  // background-color: rgba(0, 0, 0, 0.7);
+  // height: 300%;
+  width: 80%;
+}
+
+@media (min-width: 992px) {
+  .header {
+    // height: 600px;
+    &__main-logo {
+      // margin-top: 25px;
+      margin-left: 30px;
+      background-color: aqua;
+    }
+    &__ul {
+      transform: translate(0, 0);
+      display: flex;
+      width: 70%;
+      // background-color: #897ff1;
+      top: 0;
+      left: 20%;
+    }
+    &__li {
+      font-size: 20px;
+      border-bottom: none;
+      background-color: transparent;
+    }
+    &__bars {
+      display: none;
+    }
+  }
+}
