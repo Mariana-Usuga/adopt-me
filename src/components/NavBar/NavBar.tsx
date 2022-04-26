@@ -53,7 +53,8 @@ const NavBar = () => {
       >
         <li className="header__li">
           {/* <Link to="/" style={{ textDecoration: 'none' }}> */}
-          Discover
+          New
+          {/* <FaAngleDown /> */}
           {/* </Link> */}
         </li>
         <li className="header__li">
@@ -71,7 +72,7 @@ const NavBar = () => {
         <li className="header__li">
           Log in
         </li>
-        <li className="header__li">
+        <li className="header__li__signUp">
           <button className="header__li__signUp__btn" type="button">
             Sign up
           </button>

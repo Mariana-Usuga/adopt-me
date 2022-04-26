@@ -10,6 +10,7 @@
     display: grid;
     grid-template-columns:70% 15% 15%;
     &__logo{
+      margin-left: 14%;
       color:$color-primary;
     }
     &__input{
@@ -24,7 +25,7 @@
   }
   &__ul{
     // left: 50.2%;
-    // left: 30%;
+    left: 31%;
     // right: 0;
     // background-color: #0FCCCE;
     // width: 40%;
@@ -37,7 +38,7 @@
     // z-index: 10;
     position: absolute;
     transition: transform 0.3s ease;
-    width: 93%;
+    width: 86%;
     // margin-left: 0;
   }
   &__ul--show {
@@ -46,29 +47,39 @@
     background-color: $background-primary;
   }
   // &__li__inputSearch
-  &__li, &__li__signUp{
+  &__li{
     list-style-type: none;
     padding: 15px;
+    // padding-left: 0;
     // padding-left: 0;
     text-align: center;
     font-size: 1rem;
     font-family: 'Inter';
     // border-bottom: 0.3px solid;
     color: $color-secondary;
+    margin-right: 10px;
+    &__signUp{
+      list-style-type: none;
+    }
     &__inputSearch{
       display: none;
-      // width: 300px;
+      width: 300px;
+      margin-right: 70px;
     }
     a {
       color: white;
     }
-    &__signUp__btn{
-      background: #0FCCCE;
-      border-radius: 5px;
-      border: none;
-      padding: 12px;
-      // width: 150%;
-      color: $color-third;
+    &__signUp{
+      padding-top:5px;
+      &__btn{
+        background: #0FCCCE;
+        border-radius: 5px;
+        border: none;
+        padding: 12px;
+        // width: 100%;
+        color: $color-third;
+        // padding-top: 0;
+      }
     }
   }
   &__li:hover {
@@ -111,7 +122,7 @@
       top: 0;
       // left: 20%;
       // padding-right: 11%;
-      width: 50%;
+      width: 55%;
       // background-color:brown;
       &--show{
         margin-top: 0;
@@ -119,6 +130,9 @@
       }
     }
     &__li {
+      &__signUp__btn{
+        width: 150%;
+      }
       // font-size: 20px;
       border-bottom: none;
       // background-color: transparent;
