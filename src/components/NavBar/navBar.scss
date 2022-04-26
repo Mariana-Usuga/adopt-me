@@ -5,6 +5,8 @@
     background-color: $background-primary;
     height: 80px;
     // padding: 0 10%;
+    // font-family: 'Causten Round Semi Bold Oblique';
+    font-family: $font-family-primary;
   }
   &__main {
     display: grid;
@@ -24,39 +26,26 @@
     // margin-top: 10px;
   }
   &__ul{
-    // left: 50.2%;
-    left: 31%;
-    // right: 0;
-    // background-color: #0FCCCE;
-    // width: 40%;
-    // margin-left: 0;
+    left: 30%;
   }
   &__ul,
   &__ul--show {
-    // padding-left: 0;
-    // text-align: right;
-    // z-index: 10;
     position: absolute;
     transition: transform 0.3s ease;
     width: 86%;
     // margin-left: 0;
   }
   &__ul--show {
-    // margin-top: 70px;
-    // left: 30%;
     background-color: $background-primary;
   }
-  // &__li__inputSearch
   &__li{
     list-style-type: none;
     padding: 15px;
-    // padding-left: 0;
-    // padding-left: 0;
     text-align: center;
-    font-size: 1rem;
-    font-family: 'Inter';
-    // border-bottom: 0.3px solid;
+    font-size: $font-size-2;
+    // font-family: 'Inter';
     color: $color-secondary;
+    // color:#0FCCCE
     margin-right: 10px;
     &__signUp{
       list-style-type: none;
@@ -64,7 +53,7 @@
     &__inputSearch{
       display: none;
       width: 300px;
-      margin-right: 70px;
+      margin-right: 50px;
     }
     a {
       color: white;
@@ -76,7 +65,9 @@
         border-radius: 5px;
         border: none;
         padding: 12px;
+        font-family: $font-family-primary;
         // width: 100%;
+        font-weight: bolder;
         color: $color-third;
         // padding-top: 0;
       }
@@ -116,7 +107,7 @@
     &__ul {
       transform: translate(0, 0);
       display: flex;
-      background-color: burlywood;
+      // background-color: burlywood;
       // width: 60%;
       // background-color: #897ff1;
       top: 0;

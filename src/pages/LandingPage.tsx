@@ -1,12 +1,12 @@
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
 import NavBar from '../components/NavBar/NavBar';
-// import NavBarSecondary from '../components/NavBarSecondary/NavBarSecondary';
+import NavBarSecondary from '../components/NavBarSecondary/NavBarSecondary';
 
 const LandingPage = () => (
   <>
     <NavBar />
-    {/* <NavBarSecondary /> */}
+    <NavBarSecondary />
   </>
 );
 

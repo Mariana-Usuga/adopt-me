@@ -70,7 +70,7 @@ const NavBar = () => {
           {/* <input type="text" /> */}
         </li>
         <li className="header__li">
-          Log in
+          Login
         </li>
         <li className="header__li__signUp">
           <button className="header__li__signUp__btn" type="button">
