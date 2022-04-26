@@ -6,6 +6,7 @@ const InputSearch = () => {
   console.log('icnf');
   return (
     <div className="inputSearchContainer">
+      {/* <div className="inputSearch__container"> */}
       <div className="inputSearchContainer__fa">
         <FaSearch />
       </div>
@@ -18,6 +19,7 @@ const InputSearch = () => {
           />
         </label>
       </div>
+      {/* </div> */}
     </div>
   );
 };

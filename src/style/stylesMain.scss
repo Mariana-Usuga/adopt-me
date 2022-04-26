@@ -8,9 +8,14 @@ $color-third:white;
 $background-primary:#FAFAFA;
 $color-faSearch:#DAE1E7;
 
+/*-----------------letter--------------*/
+$font-family-primary:"Inter";
+
 :export{
   color-primary:$color-primary;
   color-secondary:$color-secondary;
 
   background-primary:$background-primary;
+
+  font-family-primary:$font-family-primary;
 }

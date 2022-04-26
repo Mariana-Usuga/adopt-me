@@ -13,8 +13,10 @@ const NavBar = () => {
   const showAndHide = (compo:string) => {
     if (compo === 'input') {
       setShowInputSearch(!showInputSearch);
+      setIsNavExpanded(false);
     } else {
       setIsNavExpanded(!isNavExpanded);
+      setShowInputSearch(false);
     }
   };
 
@@ -39,7 +41,7 @@ const NavBar = () => {
           {!isNavExpanded ? <FaBars /> : <FaTimes />}
         </button>
       </div>
-      {showInputSearch && <InputSearch />}
+      {showInputSearch && <div className="header__main__input"><InputSearch /></div>}
       {/* <div
         className={showInputSearch ? 'header__nav__input__show' : ''}
       >
@@ -51,7 +53,7 @@ const NavBar = () => {
       >
         <li className="header__li">
           {/* <Link to="/" style={{ textDecoration: 'none' }}> */}
-          About
+          Discover
           {/* </Link> */}
         </li>
         <li className="header__li">
@@ -64,13 +66,16 @@ const NavBar = () => {
         </li>
         <li className="header__li__inputSearch">
           <InputSearch />
+          {/* <input type="text" /> */}
         </li>
         <li className="header__li">
           Log in
         </li>
-        <li className="header__li__signUp">
+        <li className="header__li">
+          <button className="header__li__signUp__btn" type="button">
+            Sign up
+          </button>
           {/* <div className="header__li__signUp"> */}
-          Sign up
           {/* </div> */}
         </li>
       </ul>
