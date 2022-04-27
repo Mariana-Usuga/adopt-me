@@ -14,4 +14,14 @@
       margin: 5px 0 0 5px;
     }
   }
+  &__listProduct{
+    transform: translate(0, -150%);
+    transition: transform 0.3s ease;
+    position: absolute;
+    &--show{
+      z-index: 10;
+      position: absolute;
+      transition: transform 0.3s ease;
+    }
+  }
 }
