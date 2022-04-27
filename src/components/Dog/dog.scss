@@ -1,0 +1,14 @@
+@import "../../style/stylesMain.scss";
+
+.container{
+  font-family: $font-family-primary;
+  background-color:$background-primary;
+  &__dog{
+    list-style-type: none;
+    &__item{
+      padding: 15px;
+      // padding-left: 0;
+      // text-align: center;
+    }
+  }
+}
