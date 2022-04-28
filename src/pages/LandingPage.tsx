@@ -11,7 +11,19 @@ const LandingPage = () => {
     <>
       <NavBar />
       <NavBarSecondary />
-      <h1 style={{ position: 'relative' }}>hollaaaaaa</h1>
+      <div>
+        <div style={{
+          position: 'relative',
+          textAlign: 'center',
+          margin: '0 auto',
+          width: '70%',
+        }}
+        >
+          <ul>
+            <li>ñññe</li>
+          </ul>
+        </div>
+      </div>
     </>
   );
 };

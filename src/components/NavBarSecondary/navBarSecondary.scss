@@ -4,9 +4,12 @@
   color:$color-secondary;
   display: flex;
   font-size: $font-size-2;
-  margin: 1% 0 0 6%;
-  // position: relative;
-  // position:absolute;
+  margin: 1% 0 0 10%;
+  font-family: $font-family-primary;
+  :hover{
+    cursor: pointer;
+    color: $color-primary
+  }
   &__item{
     display: flex;
     margin-right: 20px;
@@ -15,13 +18,25 @@
     }
   }
   &__listProduct{
-    transform: translate(0, -150%);
+    transform: translate(0, -200%);
     transition: transform 0.3s ease;
     position: absolute;
     &--show{
+      width: 100%;
       z-index: 10;
       position: absolute;
       transition: transform 0.3s ease;
+    }
+  }
+}
+
+@media (min-width: 992px){
+  .category{
+    &__listProduct{
+      &--show{
+        // width: 70%;
+        margin:0 auto
+      }
     }
   }
 }

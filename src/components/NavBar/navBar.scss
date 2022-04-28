@@ -23,17 +23,17 @@
   }
   &__ul {
     transform: translate(0, -150%);
-    // margin-top: 10px;
   }
   &__ul{
-    left: 30%;
+    left: 33%;
   }
   &__ul,
   &__ul--show {
     position: absolute;
     transition: transform 0.3s ease;
-    width: 86%;
-    // margin-left: 0;
+    width: 99%;
+    z-index: 20;
+    padding-left: 0;
   }
   &__ul--show {
     background-color: $background-primary;
@@ -60,16 +60,15 @@
     }
     &__signUp{
       padding-top:5px;
+      text-align:center;
       &__btn{
         background: #0FCCCE;
         border-radius: 5px;
         border: none;
         padding: 12px;
         font-family: $font-family-primary;
-        // width: 100%;
         font-weight: bolder;
         color: $color-third;
-        // padding-top: 0;
       }
     }
   }

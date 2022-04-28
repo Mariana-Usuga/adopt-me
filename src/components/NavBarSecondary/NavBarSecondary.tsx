@@ -8,7 +8,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
-import { useState, MouseEvent } from 'react';
+import { useState } from 'react';
 import Dropdown from '../Dropdown/Dropdown';
 import { DogProducts } from '../../Data/DogProducts';
 import { CatProducts } from '../../Data/CatProducts/CatProducts';
@@ -26,36 +26,32 @@ const NavBarSecondary = () => {
     CatProducts,
   ];
 
-  const showProducts = (e:MouseEvent<HTMLButtonElement>, index:number) => {
+  const showProducts = (index:number) => {
     setAnimalProduct(index);
-    // if (index === 1) {
-    const { name } = e.currentTarget;
-    console.log('showw', name);
-    setShow({ ...show, cat: !show.cat, dog: false });
-    // } else {
-    // setShow({ ...show, cat: !show.cat, dog: false });
-    // }
+    if (index === 1) {
+      setShow({ ...show, dog: !show.dog, cat: false });
+    } else {
+      setShow({ ...show, cat: !show.cat, dog: false });
+    }
   };
 
   return (
     <>
       <div className="category">
-        <button type="button" name="dog" onClick={(e) => showProducts(e, 1)}>
+        <div onClick={() => showProducts(1)}>
           <Dropdown animal="Dog" faAngleDown={show.dog} />
-        </button>
-        <button type="button" name="cat" onClick={(e) => showProducts(e, 2)}>
+        </div>
+        <div onClick={() => showProducts(2)}>
           <Dropdown animal="Cat" faAngleDown={show.cat} />
-        </button>
+        </div>
       </div>
-      {/* <div className={!show ? "category__listProduct" : "category__listProduct--show"}>
+      <div className={show.cat || show.dog ? "category__listProduct--show"
+        : "category__listProduct"}
+      >
         <ListProduct products={products[animalProduct]} />
-      </div> */}
-      {show.cat || show.dog ? <ListProduct products={products[animalProduct]} /> : null}
+      </div>
     </>
   );
 };
 
 export default NavBarSecondary;
-function e(e: any, arg1: number): void {
-  throw new Error('Function not implemented.');
-}

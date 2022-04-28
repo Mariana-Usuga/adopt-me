@@ -1,0 +1,25 @@
+@import "../../style/stylesMain.scss";
+
+.container{
+  font-family: $font-family-primary;
+  background-color:$background-primary;
+  margin:0 auto;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 10%);
+  border: 1px solid #DAE1E7;
+  &__dog{
+    list-style-type: none;
+    &__item{
+      font-weight: bold;
+      padding: 15px;
+    }
+  }
+}
+
+@media (min-width: 992px){
+  .container{
+    width: 80%;
+    &__dog{
+      // display: flex;
+    }
+  }
+}
