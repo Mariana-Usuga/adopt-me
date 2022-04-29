@@ -14,6 +14,7 @@ $color-faSearch:#DAE1E7;
 $font-family-primary:'Poppins', sans-serif;
 $font-size-1:0.75rem;
 $font-size-2:1rem;
+$font-size-6:2.87rem;
 
 :export{
   color-primary:$color-primary;
@@ -25,4 +26,5 @@ $font-size-2:1rem;
 
   font-size-1:$font-size-1;
   font-size-2:$font-size-2;
+  font-size-6:$font-size-6;
 }

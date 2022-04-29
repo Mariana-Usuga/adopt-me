@@ -1,0 +1,30 @@
+@import '../../style/stylesMain.scss';
+
+.containerImgHeader{
+  background-image:
+  url('https://res.cloudinary.com/db3njhxi0/image/upload/v1651193540/Cat_and_Puppy_Friendship_Facebook_Cover_Photo_rxpwyr.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 360px;
+  font-family: $font-family-primary;
+  padding: 5% 0 0 10%;
+  &__itemDesc{
+    font-size: $font-size-6;
+    font-weight: bolder;
+    width: 40%;
+  }
+  &__item{
+    height: 40%;
+    &__btn{
+      background: $color-primary;
+      border-radius: 5px;
+      border: none;
+      width: 20%;
+      height: 40%;
+      padding: 12px 12px;
+      font-weight: bolder;
+      color: $color-third;
+    }
+  }
+}

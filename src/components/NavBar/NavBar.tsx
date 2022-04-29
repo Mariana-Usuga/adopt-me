@@ -67,7 +67,6 @@ const NavBar = () => {
         </li>
         <li className="header__li__inputSearch">
           <InputSearch />
-          {/* <input type="text" /> */}
         </li>
         <li className="header__li">
           Login
@@ -76,12 +75,8 @@ const NavBar = () => {
           <button className="header__li__signUp__btn" type="button">
             Sign up
           </button>
-          {/* <div className="header__li__signUp"> */}
-          {/* </div> */}
         </li>
       </ul>
-      {/* </div> */}
-      {/* <div className="background" /> */}
     </nav>
   );
 };
