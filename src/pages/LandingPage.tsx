@@ -3,6 +3,7 @@
 import NavBar from '../components/NavBar/NavBar';
 import NavBarSecondary from '../components/NavBarSecondary/NavBarSecondary';
 import ImgHeader from '../components/ImgHeader/ImgHeader';
+import Description from '../components/Description/Description';
 
 const LandingPage = () => {
   // const [tasks, setTasks] = useState<DogProducts[]>([]);
@@ -13,6 +14,7 @@ const LandingPage = () => {
       <NavBar />
       <NavBarSecondary />
       <ImgHeader />
+      <Description />
     </>
   );
 };
