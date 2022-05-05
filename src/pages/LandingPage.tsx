@@ -5,6 +5,7 @@ import NavBarSecondary from '../components/NavBarSecondary/NavBarSecondary';
 import ImgHeader from '../components/ImgHeader/ImgHeader';
 import Description from '../components/Description/Description';
 import Featured from '../components/Featured/Featured';
+import ImgSecondary from '../components/ImgSecondary/ImgSecondary';
 
 const LandingPage = () => {
   // const [tasks, setTasks] = useState<DogProducts[]>([]);
@@ -16,6 +17,8 @@ const LandingPage = () => {
       <NavBarSecondary />
       <ImgHeader />
       <Description />
+      <Featured />
+      <ImgSecondary />
       <Featured />
     </>
   );

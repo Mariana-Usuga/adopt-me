@@ -1,0 +1,19 @@
+@import '../../style/stylesMain.scss';
+
+.imgSecondary{
+  display: flex;
+  margin: 80px 0;
+  // justify-content: center;
+  // align-items: center;
+  &__img{
+    width:450px;
+  }
+  &__desc{
+    background-color: $color-primary;
+    width: 70%;
+    margin-right:auto;
+    text-align: center;
+    margin:0 auto;
+    padding-top: 150px;
+  }
+}
