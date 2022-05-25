@@ -8,11 +8,11 @@ const Featured2 = () => (
     {FeaturedProducts2.map((product) => (
       <div>
         <img className="featuredProductsContainer2__img" src={product.img} alt="" />
+        <div>
+          <button className="featuredProductsContainer2__btn" type="button">ADD TO CART</button>
+        </div>
         <div>{product.name}</div>
         <div>{product.price}</div>
-        <div>
-          <button type="button">ADD TO CART</button>
-        </div>
       </div>
     ))}
   </div>
