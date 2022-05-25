@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-export const FeaturedProducts = [
+export const FeaturedProducts2 = [
   {
     id: 1,
     name: 'Hemp Oil For Dogs',

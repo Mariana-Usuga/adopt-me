@@ -1,0 +1,9 @@
+.featuredProductsContainer2{
+  margin-top: 60px;
+  display: flex;
+  justify-content:space-around;
+  flex-wrap: wrap;
+  &__img{
+   width: 200px;
+  }
+}
