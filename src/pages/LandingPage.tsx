@@ -7,6 +7,7 @@ import Description from '../components/Description/Description';
 import Featured from '../components/Featured/Featured';
 import ImgSecondary from '../components/ImgSecondary/ImgSecondary';
 import Featured2 from '../components/FeaturedProducts2/Featured2';
+import Footer from '../components/Footer/Footer';
 
 const LandingPage = () => {
   // const [tasks, setTasks] = useState<DogProducts[]>([]);
@@ -21,7 +22,8 @@ const LandingPage = () => {
       <Featured />
       <Featured2 />
       <ImgSecondary />
-      {/* <Featured />  */}
+      <Featured2 />
+      <Footer />
     </>
   );
 };

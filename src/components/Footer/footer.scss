@@ -1,0 +1,21 @@
+.footerContainer{
+  display: flex;
+  justify-content:space-around;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  &__socialmedia{
+    &__img{
+      img{
+        width: 80px;
+      }
+    }
+    &__icons{
+      ul{
+        display: flex;
+      }
+      ul li{
+        list-style-type: none
+      }
+    }
+  }
+}
