@@ -12,15 +12,19 @@ const Footer = () => (
         />
       </div>
       <div className="footerContainer__socialmedia__icons">
-        <ul>
-          <li><FaFacebookSquare /></li>
-          <li><FaInstagramSquare /></li>
-          <li><FaYoutube /></li>
-        </ul>
+        <div className="footerContainer__socialmedia__icons__item">
+          <FaFacebookSquare className="footerContainer__socialmedia__icons__item__icon" />
+        </div>
+        <div className="footerContainer__socialmedia__icons__item">
+          <FaInstagramSquare className="footerContainer__socialmedia__icons__item__icon" />
+        </div>
+        <div className="footerContainer__socialmedia__icons__item">
+          <FaYoutube className="footerContainer__socialmedia__icons__item__icon" />
+        </div>
       </div>
     </div>
     <div className="footerContainer__about">
-      <div><p>About Adopt me</p></div>
+      <div className="footerContainer__about__title">About Adopt me</div>
       <ul>
         <li>About Adopt me</li>
         <li>Services</li>
@@ -28,7 +32,7 @@ const Footer = () => (
       </ul>
     </div>
     <div className="footerContainer__linksInterests">
-      <div><p>Links interests</p></div>
+      <div className="footerContainer__linksInterests__title">Links interests</div>
       <ul>
         <li>Frecuente questions</li>
         <li>How to buy in Adopt me</li>
@@ -36,7 +40,7 @@ const Footer = () => (
       </ul>
     </div>
     <div className="footerContainer__information">
-      <div><p>Information</p></div>
+      <div className="footerContainer__information__title">Information</div>
       <ul>
         <li>Telephone 234 32 2333</li>
         <li>How to buy in Adopt me</li>

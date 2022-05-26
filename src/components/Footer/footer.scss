@@ -1,12 +1,40 @@
+@import '../../style/stylesMain.scss';
+
 .footerContainer{
   display: flex;
   justify-content:space-around;
   flex-wrap: wrap;
   margin-top: 50px;
+  font-size: $font-size-2;
+  font-family: $font-family-primary;
+  // font-weight: bold;
+  // background-color: burlywood;
+  &__about{
+    // background-color: aqua;
+  }
+  &__linksInterests{
+    // background-color: blueviolet;
+  }
   &__socialmedia{
+    margin: 30px 0;
+    &__icons{
+      display: flex;
+      justify-content: space-around;
+      &__item__icon{
+        font-size: 1.5rem;
+      }
+    }
+  }
+  &__socialmedia, &__about, &__linksInterests, &__information{
+    &__title{
+      font-weight: bolder;
+    }
+    ul li{
+      list-style-type: none;
+    }
     &__img{
       img{
-        width: 80px;
+        width: 122px;
       }
     }
     &__icons{
@@ -14,7 +42,7 @@
         display: flex;
       }
       ul li{
-        list-style-type: none
+        list-style-type: none;
       }
     }
   }
