@@ -1,4 +1,3 @@
-/* eslint-disable no-shadow */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useState } from 'react';
 import { Formik } from 'formik';
@@ -22,11 +21,16 @@ const SignUp = () => {
 
   return (
     <Formik
+      initialValues={{
+        name: '',
+        email: '',
+        password: '',
+      }}
       onSubmit={() => {
         console.log('eviado');
       }}
     >
-      {(handleSubmit) => (
+      {({ handleSubmit, values }) => (
         <form action="" onSubmit={handleSubmit}>
           <div>
             <label htmlFor="name">Nombre:</label>
@@ -34,7 +38,7 @@ const SignUp = () => {
               id="name"
               type="text"
               name="name"
-              value={inputName}
+              value={values.name}
               onChange={handleInputName}
             />
           </div>
@@ -44,7 +48,7 @@ const SignUp = () => {
               id="email"
               type="text"
               name="email"
-              value={inputEmail}
+              value={values.email}
               onChange={handleInputEmail}
             />
           </div>
@@ -54,7 +58,7 @@ const SignUp = () => {
               id="password"
               type="password"
               name="password"
-              value={inputPassword}
+              value={values.password}
               onChange={handleInputPassword}
             />
           </div>
