@@ -1,15 +1,26 @@
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
 import LandingPage from './pages/LandingPage';
 import reportWebVitals from './reportWebVitals';
+import SignUp from './pages/SignUp/SignUp';
+
+const Routing = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/kml" element={<LandingPage />} />
+      <Route path="/" element={<SignUp />} />
+    </Routes>
+  </BrowserRouter>
+);
 
 ReactDOM.render(
   <React.StrictMode>
-    <LandingPage />
+    <Routing />
   </React.StrictMode>,
   document.getElementById('root'),
 );

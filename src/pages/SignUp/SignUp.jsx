@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useState } from 'react';
 import { Formik } from 'formik';
@@ -6,11 +7,6 @@ const SignUp = () => {
   const [inputName, cambiarInputName] = useState('');
   const [inputEmail, cambiarInputEmail] = useState('');
   const [inputPassword, cambiarInputPassword] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Formulario Enviado!');
-  };
 
   const handleInputName = (e) => {
     cambiarInputName(e.target.value);
@@ -30,7 +26,7 @@ const SignUp = () => {
         console.log('eviado');
       }}
     >
-      {() => (
+      {(handleSubmit) => (
         <form action="" onSubmit={handleSubmit}>
           <div>
             <label htmlFor="name">Nombre:</label>
