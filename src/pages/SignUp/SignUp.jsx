@@ -1,23 +1,10 @@
+/* eslint-disable react/no-unstable-nested-components */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useState } from 'react';
-import { Formik } from 'formik';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 const SignUp = () => {
-  const [inputName, cambiarInputName] = useState('');
-  const [inputEmail, cambiarInputEmail] = useState('');
-  const [inputPassword, cambiarInputPassword] = useState('');
-
-  const handleInputName = (e) => {
-    cambiarInputName(e.target.value);
-  };
-
-  const handleInputEmail = (e) => {
-    cambiarInputEmail(e.target.value);
-  };
-
-  const handleInputPassword = (e) => {
-    cambiarInputPassword(e.target.value);
-  };
+  const [formSend, setFormSend] = useState(false);
 
   return (
     <Formik
@@ -26,44 +13,67 @@ const SignUp = () => {
         email: '',
         password: '',
       }}
-      onSubmit={() => {
-        console.log('eviado');
+      validate={(values) => {
+        const errors = {};
+        if (!values.name) {
+          errors.name = 'Please enter name';
+        } else if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(values.name)) {
+          errors.name = 'el nombre solo puede contener letras y espacios';
+        }
+        if (!values.email) {
+          errors.email = 'Please enter email';
+        } else if (!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(values.email)) {
+          errors.email = 'el correo solo puede contener letras, numeros, puntos, guiones, y guion bajo';
+        }
+        if (!values.password) {
+          errors.password = 'Please enter password';
+        }
+        return errors;
+      }}
+      onSubmit={(values, { resetForm }) => {
+        resetForm();
+        setFormSend(true);
+        setTimeout(() => setFormSend(false), 5000);
+        console.log('eviado', values);
       }}
     >
-      {({ handleSubmit, values }) => (
-        <form action="" onSubmit={handleSubmit}>
+      {({ errors, touched }) => (
+        <Form action="">
           <div>
             <label htmlFor="name">Nombre:</label>
-            <input
+            <Field
               id="name"
               type="text"
               name="name"
-              value={values.name}
-              onChange={handleInputName}
+            />
+            <ErrorMessage
+              name="name"
+              component={() => (
+                <div>{errors.name}</div>
+              )}
             />
           </div>
           <div>
             <label htmlFor="email">Email:</label>
-            <input
+            <Field
               id="email"
               type="text"
               name="email"
-              value={values.email}
-              onChange={handleInputEmail}
             />
+            {touched.email && errors.email && <div>{errors.email}</div>}
           </div>
           <div>
             <label htmlFor="password">Password:</label>
-            <input
+            <Field
               id="password"
               type="password"
               name="password"
-              value={values.password}
-              onChange={handleInputPassword}
             />
+            {touched.password && errors.password && <div>{errors.password}</div>}
           </div>
           <button type="submit">Submit</button>
-        </form>
+          {formSend && <p>Form send</p> }
+        </Form>
       )}
     </Formik>
   );
