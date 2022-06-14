@@ -2,11 +2,22 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import Lottie from 'react-lottie';
+import catLottie from '../../style/static/cat-lottie.json';
 
 import './signUp.scss';
 
 const SignUp = () => {
   const [formSend, setFormSend] = useState(false);
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: catLottie,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+    },
+  };
 
   return (
     <Formik
@@ -42,7 +53,11 @@ const SignUp = () => {
       {({ errors, touched }) => (
         <div className="formik">
           <div className="formik__img">
-            <img src="" alt="" />
+            <Lottie
+              ptions={defaultOptions}
+              height={800}
+              width={800}
+            />
           </div>
           <div className="formik__container">
             <h2 className="formik__container__logo">Adopt me</h2>
