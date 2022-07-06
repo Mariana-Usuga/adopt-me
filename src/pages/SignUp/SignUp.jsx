@@ -3,11 +3,9 @@
 import { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Lottie from 'react-lottie';
-import catLottie from '../../style/static/cat-lottie.json';
+import catLottie from '../../style/static/67834-ssssttt-shut-up-the-cat-is-sleeping.json';
 
 import './signUp.scss';
-
-import '../../style/stylesMain.scss';
 
 const SignUp = () => {
   const [formSend, setFormSend] = useState(false);
@@ -54,11 +52,12 @@ const SignUp = () => {
     >
       {({ errors, touched }) => (
         <div className="formik">
-          <div className="formik__img">
+          <div className="formik__animation">
             <Lottie
-              ptions={defaultOptions}
-              height={800}
-              width={800}
+              className="formik__animation__lottie"
+              options={defaultOptions}
+              height={650}
+              width={650}
             />
           </div>
           <div className="formik__container">
