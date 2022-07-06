@@ -1,25 +1,57 @@
-@import '../../style/stylesMain.scss';
 
-.formSign{
-  text-align: center;
-  background-color: aqua;
-  margin: auto;
-  width: 90%;
-  padding: 10px;
-  font-family: $font-family-primary;
-  &__item{
-    &__label{
-      visibility: hidden;
+@import "./../../style/stylesMain.scss";
+
+.formik {
+  &__container {
+    &__logo {
+      margin-top: 100px;
+      text-align: center;
+      color: $color-primary;
     }
-    &__field{
-      width: 210px;
-      height: 36px;
-      left: 504px;
-      top: 155px;
-      background: #E5E5E5;
-      border-radius: 5px;
-      border: none;
+
+    &__title {
+      text-align: center;
+    }
+
+
+    &__form {
+      margin: auto;
+      height: 89.5vh;
+
+      &__item {
+        text-align: center;
+
+        &__label {
+          display: none;
+        }
+
+        &__field {
+          width: 240px;
+          margin-bottom: 20px;
+          border: 1px solid #DAE1E7;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.10);
+          height: 36px;
+          background-color: #fafafa;
+          border-radius: 5px;
+          font-family: $font-family-primary;
+        }
+      }
+
+      &__login,
+      &__submit {
+        text-align: center;
+        margin-bottom: 20px;
+
+        &__btn {
+          width: 210px;
+          height: 33px;
+          background: $color-primary;
+          border: none;
+          color: $color-third;
+          border-radius: 5px;
+          font-size: $font-size-2;
+        }
+      }
     }
   }
-
 }
