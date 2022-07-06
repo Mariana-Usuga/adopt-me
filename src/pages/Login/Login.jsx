@@ -3,6 +3,10 @@
 import { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
+import '../../style/stylesMain.scss';
+
+import './login.scss';
+
 const SignUp = () => {
   const [formSend, setFormSend] = useState(false);
 
@@ -38,9 +42,9 @@ const SignUp = () => {
       }}
     >
       {({ errors, touched }) => (
-        <Form action="">
-          <div>
-            <label htmlFor="name">Nombre:</label>
+        <Form className="form" action="">
+          <div className="form__item">
+            <label className="form__item__label" htmlFor="name">Nombre::</label>
             <Field
               id="name"
               type="text"
@@ -53,8 +57,8 @@ const SignUp = () => {
               )}
             />
           </div>
-          <div>
-            <label htmlFor="email">Email:</label>
+          <div className="form__item">
+            <label className="form__item__label" htmlFor="email">Email:</label>
             <Field
               id="email"
               type="text"
@@ -62,8 +66,8 @@ const SignUp = () => {
             />
             {touched.email && errors.email && <div>{errors.email}</div>}
           </div>
-          <div>
-            <label htmlFor="password">Password:</label>
+          <div className="form__item">
+            <label className="form__item__label" htmlFor="password">Password:</label>
             <Field
               id="password"
               type="password"

@@ -1,0 +1,25 @@
+@import '../../style/stylesMain.scss';
+
+.formSign{
+  text-align: center;
+  background-color: aqua;
+  margin: auto;
+  width: 90%;
+  padding: 10px;
+  font-family: $font-family-primary;
+  &__item{
+    &__label{
+      visibility: hidden;
+    }
+    &__field{
+      width: 210px;
+      height: 36px;
+      left: 504px;
+      top: 155px;
+      background: #E5E5E5;
+      border-radius: 5px;
+      border: none;
+    }
+  }
+
+}

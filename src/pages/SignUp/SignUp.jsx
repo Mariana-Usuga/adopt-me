@@ -3,6 +3,10 @@
 import { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
+import './signUp.scss';
+
+import '../../style/stylesMain.scss';
+
 const SignUp = () => {
   const [formSend, setFormSend] = useState(false);
 
@@ -38,13 +42,16 @@ const SignUp = () => {
       }}
     >
       {({ errors, touched }) => (
-        <Form action="">
-          <div>
-            <label htmlFor="name">Nombre:</label>
+        <Form className="formSign" action="">
+          <h2 className="formSign__title">Sign Up</h2>
+          <div className="formSign__item">
+            <label className="formSign__item__label" htmlFor="name">Nombre:</label>
             <Field
+              className="formSign__item__field"
               id="name"
               type="text"
               name="name"
+              placeholder="Name"
             />
             <ErrorMessage
               name="name"
@@ -53,25 +60,29 @@ const SignUp = () => {
               )}
             />
           </div>
-          <div>
-            <label htmlFor="email">Email:</label>
+          <div className="formSign__item">
+            <label className="formSign__item__label" htmlFor="email">Email:</label>
             <Field
+              className="formSign__item__field"
               id="email"
               type="text"
               name="email"
+              placeholder="Email"
             />
             {touched.email && errors.email && <div>{errors.email}</div>}
           </div>
-          <div>
-            <label htmlFor="password">Password:</label>
+          <div className="formSign__item">
+            <label className="formSign__item__label" htmlFor="password">Password:</label>
             <Field
+              className="formSign__item__field"
               id="password"
               type="password"
               name="password"
+              placeholder="Password"
             />
             {touched.password && errors.password && <div>{errors.password}</div>}
           </div>
-          <button type="submit">Submit</button>
+          <button className="formSign__submit" type="submit">Submit</button>
           {formSend && <p>Form send</p> }
         </Form>
       )}
