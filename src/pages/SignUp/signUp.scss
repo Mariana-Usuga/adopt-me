@@ -6,10 +6,8 @@
   flex-wrap: wrap;
   justify-content:center;
   background-color: $font-family-primary;
-  // margin-right: 40px;
   &__animation{
     display: none;
-    // width: 40%;
   }
   &__container {
     padding: 30px;
@@ -17,7 +15,6 @@
     height: 50%;
     margin-top: 40px;
     &__logo {
-      // margin-top: 100px;
       text-align: center;
       color: $color-primary;
       font-family: $font-family-primary;

@@ -2,13 +2,24 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+// import Lottie from 'lottie-web';
+// import catLottie from '../../style/static/67834-ssssttt-shut-up-the-cat-is-sleeping.json';
 
 import '../../style/stylesMain.scss';
 
 import './login.scss';
 
-const SignUp = () => {
+const Login = () => {
   const [formSend, setFormSend] = useState(false);
+
+  // const defaultOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: catLottie,
+  //   rendererSettings: {
+  //     preserveAspectRatio: 'xMidYMid slice',
+  //   },
+  // };
 
   return (
     <Formik
@@ -42,45 +53,73 @@ const SignUp = () => {
       }}
     >
       {({ errors, touched }) => (
-        <Form className="form" action="">
-          <div className="form__item">
-            <label className="form__item__label" htmlFor="name">Nombre::</label>
-            <Field
-              id="name"
-              type="text"
-              name="name"
+        <div className="formik">
+          {/* <div className="formik__animation">
+            <Lottie
+              className="formik__animation__lottie"
+              options={defaultOptions}
+              height={600}
+              width={630}
             />
-            <ErrorMessage
-              name="name"
-              component={() => (
-                <div>{errors.name}</div>
-              )}
-            />
+          </div> */}
+          <div className="formik__container">
+            <h2 className="formik__container__logo">Adopt me</h2>
+            <h2 className="formik__container__title">Sign Up</h2>
+            <Form action="" className="formik__container__form">
+              <div className="formik__container__form__item">
+                <label className="formik__container__form__item__label" htmlFor="name">Nombre:</label>
+                <Field
+                  className="formik__container__form__item__field"
+                  id="name"
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                />
+                <ErrorMessage
+                  name="name"
+                  component={() => (
+                    <div>{errors.name}</div>
+                  )}
+                />
+              </div>
+              <div className="formik__container__form__item">
+                <label className="formik__container__form__item__label" htmlFor="email">Email:</label>
+                <Field
+                  className="formik__container__form__item__field"
+                  id="email"
+                  type="text"
+                  name="email"
+                  placeholder="Email"
+                />
+                {touched.email && errors.email && <div>{errors.email}</div>}
+              </div>
+              <div className="formik__container__form__item">
+                <label className="formik__container__form__item__label" htmlFor="password">Password:</label>
+                <Field
+                  className="formik__container__form__item__field"
+                  id="password"
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                />
+                {touched.password && errors.password && <div>{errors.password}</div>}
+              </div>
+              <div className="formik__container__form__submit">
+                <button className="formik__container__form__submit__btn" type="submit">Create account</button>
+              </div>
+              <div className="formik__container__form__login">
+                <div>
+                  Already have an account?
+                  <span> Log in</span>
+                </div>
+              </div>
+              {formSend && <p>Form send</p>}
+            </Form>
           </div>
-          <div className="form__item">
-            <label className="form__item__label" htmlFor="email">Email:</label>
-            <Field
-              id="email"
-              type="text"
-              name="email"
-            />
-            {touched.email && errors.email && <div>{errors.email}</div>}
-          </div>
-          <div className="form__item">
-            <label className="form__item__label" htmlFor="password">Password:</label>
-            <Field
-              id="password"
-              type="password"
-              name="password"
-            />
-            {touched.password && errors.password && <div>{errors.password}</div>}
-          </div>
-          <button type="submit">Submit</button>
-          {formSend && <p>Form send</p> }
-        </Form>
+        </div>
       )}
     </Formik>
   );
 };
 
-export default SignUp;
+export default Login;
