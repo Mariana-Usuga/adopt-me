@@ -4,10 +4,12 @@
 .formik {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  background-color: $color-primary;
+  justify-content:center;
+  background-color: $font-family-primary;
+  // margin-right: 40px;
   &__animation{
-    width: 50%;
+    display: none;
+    // width: 40%;
   }
   &__container {
     padding: 30px;
@@ -29,7 +31,7 @@
     &__form {
       margin: auto;
       // height: 89.5vh;
-
+      // margin-right: 10px;
       &__item {
         text-align: center;
 
@@ -38,6 +40,7 @@
         }
 
         &__field {
+          padding-left: 7px;
           width: 240px;
           margin-bottom: 20px;
           border: 1px solid #DAE1E7;
@@ -67,3 +70,12 @@
     }
   }
 }
+
+@media (min-width: 992px){
+  .formik{
+    &__animation{
+      display: block;
+    }
+  }
+}
+

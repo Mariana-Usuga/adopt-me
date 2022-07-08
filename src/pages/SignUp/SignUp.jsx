@@ -56,8 +56,8 @@ const SignUp = () => {
             <Lottie
               className="formik__animation__lottie"
               options={defaultOptions}
-              height={650}
-              width={650}
+              height={600}
+              width={630}
             />
           </div>
           <div className="formik__container">
