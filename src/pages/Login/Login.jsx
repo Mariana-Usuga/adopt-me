@@ -1,9 +1,10 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/no-unstable-nested-components */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useState } from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-// import Lottie from 'lottie-web';
-// import catLottie from '../../style/static/67834-ssssttt-shut-up-the-cat-is-sleeping.json';
+import { Formik, Form, Field } from 'formik';
+import Lottie from 'react-lottie';
+import catLottie from '../../style/static/67834-ssssttt-shut-up-the-cat-is-sleeping.json';
 
 import '../../style/stylesMain.scss';
 
@@ -12,14 +13,14 @@ import './login.scss';
 const Login = () => {
   const [formSend, setFormSend] = useState(false);
 
-  // const defaultOptions = {
-  //   loop: true,
-  //   autoplay: true,
-  //   animationData: catLottie,
-  //   rendererSettings: {
-  //     preserveAspectRatio: 'xMidYMid slice',
-  //   },
-  // };
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: catLottie,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+    },
+  };
 
   return (
     <Formik
@@ -49,39 +50,22 @@ const Login = () => {
         resetForm();
         setFormSend(true);
         setTimeout(() => setFormSend(false), 5000);
-        console.log('eviado', values);
       }}
     >
       {({ errors, touched }) => (
         <div className="formik">
-          {/* <div className="formik__animation">
+          <div className="formik__animation">
             <Lottie
               className="formik__animation__lottie"
               options={defaultOptions}
               height={600}
               width={630}
             />
-          </div> */}
+          </div>
           <div className="formik__container">
             <h2 className="formik__container__logo">Adopt me</h2>
-            <h2 className="formik__container__title">Sign Up</h2>
+            <h2 className="formik__container__title">Log in</h2>
             <Form action="" className="formik__container__form">
-              <div className="formik__container__form__item">
-                <label className="formik__container__form__item__label" htmlFor="name">Nombre:</label>
-                <Field
-                  className="formik__container__form__item__field"
-                  id="name"
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                />
-                <ErrorMessage
-                  name="name"
-                  component={() => (
-                    <div>{errors.name}</div>
-                  )}
-                />
-              </div>
               <div className="formik__container__form__item">
                 <label className="formik__container__form__item__label" htmlFor="email">Email:</label>
                 <Field
@@ -105,12 +89,12 @@ const Login = () => {
                 {touched.password && errors.password && <div>{errors.password}</div>}
               </div>
               <div className="formik__container__form__submit">
-                <button className="formik__container__form__submit__btn" type="submit">Create account</button>
+                <button className="formik__container__form__submit__btn" type="submit">Sign in</button>
               </div>
               <div className="formik__container__form__login">
                 <div>
-                  Already have an account?
-                  <span> Log in</span>
+                  Don't have an account?
+                  <span> Sign Up</span>
                 </div>
               </div>
               {formSend && <p>Form send</p>}
