@@ -86,6 +86,7 @@ const Login = () => {
                   name="password"
                   placeholder="Password"
                 />
+                <div className="formik__container__form__forgortPassword">Forgot password?</div>
                 {touched.password && errors.password && <div>{errors.password}</div>}
               </div>
               <div className="formik__container__form__submit">
