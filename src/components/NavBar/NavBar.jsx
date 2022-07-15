@@ -10,7 +10,7 @@ const NavBar = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const [showInputSearch, setShowInputSearch] = useState(false);
 
-  const showAndHide = (compo:string) => {
+  const showAndHide = (compo) => {
     if (compo === 'input') {
       setShowInputSearch(!showInputSearch);
       setIsNavExpanded(false);

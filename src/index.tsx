@@ -9,6 +9,8 @@ import LandingPage from './pages/LandingPage';
 import reportWebVitals from './reportWebVitals';
 import SignUp from './pages/SignUp/SignUp';
 import Login from './pages/Login/Login';
+import ItemDetail from './pages/ItemDetail/ItemDetail';
+import Layout from './components/Layout/Layout';
 
 const Routing = () => (
   <BrowserRouter>
@@ -16,6 +18,11 @@ const Routing = () => (
       <Route path="/" element={<LandingPage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signUp" element={<SignUp />} />
+      <Route path="/itemDetail" element={<ItemDetail />} />
+      <Route path="pages" element={<Layout />}>
+        <Route path="itemDetail" element={<ItemDetail />} />
+      </Route>
+
     </Routes>
   </BrowserRouter>
 );
