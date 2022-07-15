@@ -1,10 +1,9 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable react/no-unstable-nested-components */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useState } from 'react';
 import { Formik, Form, Field } from 'formik';
 import Lottie from 'react-lottie';
-import catLottie from '../../style/static/67834-ssssttt-shut-up-the-cat-is-sleeping.json';
+import { Link } from 'react-router-dom';
+import catLottie from '../../style/static/cat.json';
 
 import '../../style/stylesMain.scss';
 
@@ -67,7 +66,9 @@ const Login = () => {
             <h2 className="formik__container__title">Log in</h2>
             <Form action="" className="formik__container__form">
               <div className="formik__container__form__item">
-                <label className="formik__container__form__item__label" htmlFor="email">Email:</label>
+                <label className="formik__container__form__item__label">
+                  Email:
+                </label>
                 <Field
                   className="formik__container__form__item__field"
                   id="email"
@@ -92,10 +93,16 @@ const Login = () => {
               <div className="formik__container__form__submit">
                 <button className="formik__container__form__submit__btn" type="submit">Sign in</button>
               </div>
-              <div className="formik__container__form__login">
+              <div className="formik__container__form__signUp">
                 <div>
-                  Don't have an account?
-                  <span> Sign Up</span>
+                  {'Don\'t have an account?'}
+                  <Link
+                    to="/signUp"
+                    // style={{ textDecoration: 'none' }}
+                    className="formik__container__form__signUp__link"
+                  >
+                    <span> Sign Up</span>
+                  </Link>
                 </div>
               </div>
               {formSend && <p>Form send</p>}

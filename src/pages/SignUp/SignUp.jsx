@@ -3,7 +3,8 @@
 import { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Lottie from 'react-lottie';
-import catLottie from '../../style/static/67834-ssssttt-shut-up-the-cat-is-sleeping.json';
+import { Link } from 'react-router-dom';
+import catLottie from '../../style/static/cute-dog.json';
 
 import './signUp.scss';
 
@@ -108,7 +109,12 @@ const SignUp = () => {
               <div className="formik__container__form__login">
                 <div>
                   Already have an account?
-                  <span> Log in</span>
+                  <Link
+                    to="/login"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <span className="formik__container__form__login__span"> Log in</span>
+                  </Link>
                 </div>
               </div>
               {formSend && <p>Form send</p>}

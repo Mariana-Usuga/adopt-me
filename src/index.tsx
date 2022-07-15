@@ -7,14 +7,15 @@ import './index.css';
 // import App from './App';
 import LandingPage from './pages/LandingPage';
 import reportWebVitals from './reportWebVitals';
-// import SignUp from './pages/SignUp/SignUp';
+import SignUp from './pages/SignUp/SignUp';
 import Login from './pages/Login/Login';
 
 const Routing = () => (
   <BrowserRouter>
     <Routes>
-      <Route path="/kml" element={<LandingPage />} />
-      <Route path="/" element={<Login />} />
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signUp" element={<SignUp />} />
     </Routes>
   </BrowserRouter>
 );

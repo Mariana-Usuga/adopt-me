@@ -49,6 +49,12 @@
         }
       }
 
+      &__login{
+        &__span{
+          color: $color-primary;
+        }
+      }
+
       &__login,
       &__submit {
         text-align: center;
