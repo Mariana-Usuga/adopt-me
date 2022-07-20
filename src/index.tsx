@@ -11,6 +11,7 @@ import SignUp from './pages/SignUp/SignUp';
 import Login from './pages/Login/Login';
 import ItemDetail from './pages/ItemDetail/ItemDetail';
 import Layout from './components/Layout/Layout';
+import Cart from './pages/Cart/Cart';
 
 const Routing = () => (
   <BrowserRouter>
@@ -21,6 +22,7 @@ const Routing = () => (
       <Route path="/itemDetail" element={<ItemDetail />} />
       <Route path="pages" element={<Layout />}>
         <Route path="itemDetail" element={<ItemDetail />} />
+        <Route path="cart" element={<Cart />} />
       </Route>
 
     </Routes>
