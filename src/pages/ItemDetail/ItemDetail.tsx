@@ -1,3 +1,5 @@
+// eslint-disable-next-line import/no-unresolved, import/extensions
+import Amount from '../../components/Amount/Amount';
 import './itemDetail.scss';
 
 const ItemDetail = () => {
@@ -24,14 +26,8 @@ const ItemDetail = () => {
       <div className="itemDetail__info">
         <h2 className="itemDetail__info__title">Cat Chow for Cat</h2>
         <div className="itemDetail__info__container">
-          <div className="itemDetail__info__container__price">
-            {/* {product?.price.toLocaleString('es-MX')} */}
-            20.000
-          </div>
-          <div className="itemDetail__info__container__amount">
-            <div>Amount</div>
-            <div>- 1 +</div>
-          </div>
+          <div>20.000</div>
+          <Amount />
         </div>
         <div className="itemDetail__info__btns">
           <button className="itemDetail__info__btns__btnBuy" type="button">

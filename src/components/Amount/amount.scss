@@ -1,0 +1,10 @@
+.amount{
+  margin-left: 50px;
+  width: 100px;
+  &__title{
+  }
+  &__container{
+    display: flex;
+    justify-content: space-between;
+  }
+}
