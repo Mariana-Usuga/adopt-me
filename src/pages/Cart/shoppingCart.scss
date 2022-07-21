@@ -5,19 +5,33 @@
   box-shadow: 0 0 8px 1px rgb(39 25 56 / 8%);
   padding: 16px;
   margin: 16px;
+  &__header{
+    font-size: 30px;
+    margin-bottom: 15px;
+    color:$color-primary;
+    font-weight: bolder;
+  }
   &__shoppingCart{
     display: flex;
     &__product{
       &__detail{
+        margin-left: 5px;
+        &__title{
+          font-size:12px;
+        }
         &__totalProduct{
+          width: 140px;
           display: flex;
           justify-content: space-between;
-          // background-color: blue;
+          margin-top:20px;
+          &__totalPrice{
+            // margin-right: 20px;
+          }
           &__amount{
             display: flex;
             justify-content: space-between;
             border-radius: 6px;
-            // width: 20%;
+            width: 50%;
             padding: 6px;
             background-color: $color-faSearch;
             &__plus, &__less{
@@ -35,10 +49,11 @@
         display: flex;
       }
       &__img{
-        width: 50%;
-        background-color: aqua;
+        // width: 40%;
+        width:74px;
+        // background-color: aqua;
         img{
-          width: 80%;
+          max-width: 100%;
         }
       }
     }
