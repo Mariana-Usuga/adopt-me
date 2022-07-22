@@ -21,7 +21,7 @@ const Routing = () => (
       <Route path="/signUp" element={<SignUp />} />
       <Route path="/itemDetail" element={<ItemDetail />} />
       <Route path="pages" element={<Layout />}>
-        <Route path="itemDetail" element={<ItemDetail />} />
+        <Route path="itemDetail/:id" element={<ItemDetail />} />
         <Route path="cart" element={<Cart />} />
       </Route>
 

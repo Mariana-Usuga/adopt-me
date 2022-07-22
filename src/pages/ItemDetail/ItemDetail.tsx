@@ -1,8 +1,14 @@
 // eslint-disable-next-line import/no-unresolved, import/extensions
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../store/actions/cartActions';
+// import { products } from '../../mockData/products';
+// eslint-disable-next-line import/no-unresolved, import/extensions
 import Amount from '../../components/Amount/Amount';
+
 import './itemDetail.scss';
 
 const ItemDetail = () => {
+  const dispatch = useDispatch();
   // /* eslint-disable */
   // const handleCarrito = () => {
   //   const cartPrev = JSON.parse(localStorage.getItem('cartProduct')) || [];
@@ -14,6 +20,9 @@ const ItemDetail = () => {
   //   }
   // };
   console.log('working');
+  const addProduct = () => {
+    dispatch(addToCart());
+  };
   return (
     <div className="itemDetail">
       <div className="itemDetail__main">
@@ -36,6 +45,7 @@ const ItemDetail = () => {
           <button
             className="itemDetail__info__btns__btnAddCart"
             type="button"
+            onClick={addProduct}
           >
             Añadir al carrito
           </button>

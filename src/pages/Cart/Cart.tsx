@@ -1,5 +1,8 @@
 import React from 'react';
 
+// eslint-disable-next-line import/no-unresolved, import/extensions
+import { myShoppingCart } from '../../Data/myShoppingCart';
+
 import './shoppingCart.scss';
 
 const Cart = () => {
@@ -17,27 +20,62 @@ const Cart = () => {
       <div className="cart__header">Carrito</div>
       <div className="cart__shoppingCart">
         <div className="cart__shoppingCart__product">
-          <div className="cart__shoppingCart__product__container">
-            <div className="cart__shoppingCart__product__img">
-              <img src="https://laika.com.co/cdn-cgi/image/onerror=redirect,format=auto,fit=scale-down,width=600,quality=80/https://laikapp.s3.amazonaws.com/images_products/2652_Evolve_Cat_%2ALata_Pavo__614X615.png" alt="" />
-            </div>
-            <div className="cart__shoppingCart__product__detail">
-              <div className="cart__shoppingCart__product__detail__title">Evolve Cat Lata Pavo</div>
-              <div className="cart__shoppingCart__product__detail__totalProduct">
-                <div className="cart__shoppingCart__product__detail__totalProduct__totalPrice">
-                  20.000
-                </div>
-                <div className="cart__shoppingCart__product__detail__totalProduct__amount">
-                  <span className="cart__shoppingCart__product__detail__totalProduct__amount__less">-</span>
-                  <span className="cart__shoppingCart__product__detail__totalProduct__amount__number">2</span>
-                  <span className="cart__shoppingCart__product__detail__totalProduct__amount__plus">+</span>
+          {myShoppingCart.map((product) => (
+            <div className="cart__shoppingCart__product__container">
+              <div className="cart__shoppingCart__product__img">
+                <img src={product.img} alt="" />
+              </div>
+              <div className="cart__shoppingCart__product__detail">
+                <div className="cart__shoppingCart__product__detail__title">{product.name}</div>
+                <div className="cart__shoppingCart__product__detail__totalProduct">
+                  <div className="cart__shoppingCart__product__detail__totalProduct__totalPrice">
+                    {product.price}
+                  </div>
+                  <div className="cart__shoppingCart__product__detail__totalProduct__amount">
+                    <span className="cart__shoppingCart__product__detail__totalProduct__amount__less">-</span>
+                    <span
+                      className="cart__shoppingCart__product__detail__totalProduct__amount__number"
+                    >
+                      {product.amount}
+                    </span>
+                    <span
+                      className="cart__shoppingCart__product__detail__totalProduct__amount__plus"
+                    >
+                      +
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
   );
 };
 export default Cart;
+  <div className="cart">
+    <div className="cart__header">Carrito</div>
+    <div className="cart__shoppingCart">
+      <div className="cart__shoppingCart__product">
+        <div className="cart__shoppingCart__product__container">
+          <div className="cart__shoppingCart__product__img">
+            <img src="https://laika.com.co/cdn-cgi/image/onerror=redirect,format=auto,fit=scale-down,width=600,quality=80/https://laikapp.s3.amazonaws.com/images_products/2652_Evolve_Cat_%2ALata_Pavo__614X615.png" alt="" />
+          </div>
+          <div className="cart__shoppingCart__product__detail">
+            <div className="cart__shoppingCart__product__detail__title">Evolve Cat Lata Pavo</div>
+            <div className="cart__shoppingCart__product__detail__totalProduct">
+              <div className="cart__shoppingCart__product__detail__totalProduct__totalPrice">
+                20.000
+              </div>
+              <div className="cart__shoppingCart__product__detail__totalProduct__amount">
+                <span className="cart__shoppingCart__product__detail__totalProduct__amount__less">-</span>
+                <span className="cart__shoppingCart__product__detail__totalProduct__amount__number">2</span>
+                <span className="cart__shoppingCart__product__detail__totalProduct__amount__plus">+</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>;

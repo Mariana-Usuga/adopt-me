@@ -24,34 +24,6 @@ const cartReducer = (state = initialState, action) => {
         ...state,
         cart,
       };
-    case ADD_ONE_CART:
-      return {
-        ...state,
-        cart: state.cart.map((product) =>
-          product._id === action.payload
-            ? { ...product, qty: product.qty + 1 }
-            : product,
-        ),
-      };
-    case REMOVE_ONE_CART:
-      return {
-        ...state,
-        cart: state.cart.map((product) =>
-          product._id === action.payload
-            ? {
-                ...product,
-                qty: product.qty - 1,
-              }
-            : product,
-        ),
-      };
-    case DELETE_FROM_CART:
-      return {
-        ...state,
-        cart: state.cart.filter((product) => product._id !== action.payload),
-      };
-    case ESTIMATED_TOTAL:
-      return { ...state, estimatedTotal: action.payload };
     default:
       return state;
   }
