@@ -2,6 +2,7 @@
 /* eslint-disable import/no-unresolved */
 import { useState } from 'react';
 import { FaBars, FaTimes, FaSistrix } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import InputSearch from '../InputSearch/InputSearch';
 
 import './navBar.scss';
@@ -75,6 +76,13 @@ const NavBar = () => {
           <button className="header__li__signUp__btn" type="button">
             Sign up
           </button>
+        </li>
+        <li className="header__li__signUp">
+          <Link to="pages/cart">
+            <button className="header__li__signUp__btn" type="button">
+              Carrito
+            </button>
+          </Link>
         </li>
       </ul>
     </nav>

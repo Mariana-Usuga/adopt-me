@@ -1,3 +1,6 @@
+/* eslint-disable import/extensions */
+/* eslint-disable import/no-unresolved */
+import { Product } from '../../interface/Product';
 import { LOAD_CART,
   ADD_TO_CART,
   ADD_ONE_CART,
@@ -5,12 +8,12 @@ import { LOAD_CART,
   DELETE_FROM_CART,
   ESTIMATED_TOTAL } from '../types/cartTypes';
 
-export const loadCart = (cart) => ({
+export const loadCart = (cart: Product[]) => ({
   type: LOAD_CART,
   payload: cart,
 });
 
-export const addToCart = (product) => ({
+export const addToCart = (product: Product) => ({
   type: ADD_TO_CART,
   payload: product,
 });

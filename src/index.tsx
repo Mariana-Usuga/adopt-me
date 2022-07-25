@@ -5,6 +5,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
+import { Provider } from 'react-redux';
+import store from './store/index';
 import LandingPage from './pages/LandingPage';
 import reportWebVitals from './reportWebVitals';
 import SignUp from './pages/SignUp/SignUp';
@@ -24,14 +26,15 @@ const Routing = () => (
         <Route path="itemDetail/:id" element={<ItemDetail />} />
         <Route path="cart" element={<Cart />} />
       </Route>
-
     </Routes>
   </BrowserRouter>
 );
 
 ReactDOM.render(
   <React.StrictMode>
-    <Routing />
+    <Provider store={store}>
+      <Routing />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
 );
