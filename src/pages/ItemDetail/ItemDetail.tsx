@@ -3,16 +3,20 @@
 import { useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { addToCart } from '../../store/actions/cartActions';
+// import { RootState } from '../../store';
+// import { addToCart } from '../../store/actions/cartActions';
 import Amount from '../../components/Amount/Amount';
 import { Product } from '../../interface/Product';
 import { products } from '../../Data/products';
-
+import { addToCart } from '../../store/reducers/cartReducer';
+import Cart from '../Cart/Cart';
 import './itemDetail.scss';
 
 const ItemDetail = () => {
+  // const count = useSelector((state: RootState) => state.cart.cart);
   const dispatch = useDispatch();
   const { id } = useParams();
+
   const [item, setItem] = useState({
     id: 0,
     img: '',
@@ -21,7 +25,8 @@ const ItemDetail = () => {
   });
 
   const addProduct = () => {
-    dispatch(addToCart());
+    console.log('add', item);
+    dispatch(addToCart(item));
   };
 
   useEffect(() => {
@@ -29,8 +34,6 @@ const ItemDetail = () => {
     if (p !== undefined) {
       setItem(p);
     }
-    // console.log('useEffe', p, 'id para', id, 'pro');
-  // setItem(products.find((p: Product) => p.id === id));
   }, []);
 
   return (
@@ -61,6 +64,7 @@ const ItemDetail = () => {
           </button>
         </div>
       </div>
+      <Cart />
     </div>
   );
 };

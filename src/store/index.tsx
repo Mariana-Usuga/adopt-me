@@ -2,7 +2,7 @@
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
 import { configureStore } from '@reduxjs/toolkit';
-// import reducers from './reducers/index';
+import reducers from './reducers/index';
 
 // const store = createStore(
 //   reducers,
@@ -12,7 +12,7 @@ import { configureStore } from '@reduxjs/toolkit';
 
 export const store = configureStore({
   reducer: {
-
+    cart: reducers,
   },
 });
 
