@@ -25,6 +25,9 @@ export const counterSlice = createSlice({
     addToCart: (state, action) => {
       state.cart = [...state.cart, action.payload];
     },
+    deleteItem: (state, action) => {
+      state.cart = [...state.cart, action.payload];
+    },
   },
 });
 
