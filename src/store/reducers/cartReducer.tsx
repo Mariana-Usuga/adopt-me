@@ -19,6 +19,9 @@ export const counterSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
+    loadCart: (state, action) => {
+      state.cart = [...state.cart, action.payload];
+    },
     addToCart: (state, action) => {
       state.cart = [...state.cart, action.payload];
     },
