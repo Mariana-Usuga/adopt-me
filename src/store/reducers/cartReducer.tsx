@@ -3,18 +3,23 @@
 /* eslint-disable no-unused-expressions */
 /* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
-import { Product } from '../../interface/Product';
+// import { Product } from '../../interface/Product';
+export interface itemCart {
+  id?:number
+  img?:string
+  name?:string
+  price?:number
+  qty: number
+}
 
 export interface Cart {
   map: any;
-  cart: Product[]
-  qty: number;
+  cart: itemCart[];
 }
 
 const initialState: Cart = {
   cart: [],
   map: undefined,
-  qty: 0,
 };
 
 export const counterSlice = createSlice({
@@ -41,7 +46,7 @@ export const counterSlice = createSlice({
   },
 });
 
-export const { addToCart } = counterSlice.actions;
+export const { addToCart, deleteItem } = counterSlice.actions;
 
 export default counterSlice.reducer;
 // /* eslint-disable */

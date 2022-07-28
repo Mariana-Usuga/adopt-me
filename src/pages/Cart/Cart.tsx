@@ -1,3 +1,6 @@
+/* eslint-disable no-use-before-define */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
 import React from 'react';
@@ -7,6 +10,7 @@ import { deleteItem } from '../../store/reducers/cartReducer';
 import { RootState } from '../../store';
 
 import './shoppingCart.scss';
+import { Product } from '../../interface/Product';
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -14,16 +18,16 @@ const Cart = () => {
   // const token = JSON.parse(localStorage.getItem('token'));
   console.log('bien', cart.cart);
 
-  const lessQuantity = () => {
-    dispatch(deleteItem());
-  };
+  // const lessQuantity = (id: number) => {
+  //   dispatch(deleteItem(id));
+  // };
 
   return (
     <div className="cart">
       <div className="cart__header">Carrito</div>
       <div className="cart__shoppingCart">
         <div className="cart__shoppingCart__product">
-          {cart.cart.map((product: any) => (
+          {cart.cart.map((product: Product) => (
             <div className="cart__shoppingCart__product__container">
               <div className="cart__shoppingCart__product__img">
                 <img src={product.img} alt="" />
@@ -37,7 +41,7 @@ const Cart = () => {
                   <div className="cart__shoppingCart__product__detail__totalProduct__amount">
                     <span
                       className="cart__shoppingCart__product__detail__totalProduct__amount__less"
-                      onClick={lessQuantity}
+                      onClick={() => dispatch(deleteItem(id))}
                     >
                       -
                     </span>
@@ -64,5 +68,8 @@ const Cart = () => {
 
 export default Cart;
 function deleteItem(): any {
+  throw new Error('Function not implemented.');
+}
+function id(id: any): any {
   throw new Error('Function not implemented.');
 }
