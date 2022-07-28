@@ -40,6 +40,9 @@ export const counterSlice = createSlice({
         }
         : product));
     },
+    deleteOfCart: (state, action) => {
+      state.cart = state.cart.filter((product) => (product.id !== action.payload));
+    },
     deleteIte: (state, action) => {
       state.cart = [...state.cart, action.payload];
     },
