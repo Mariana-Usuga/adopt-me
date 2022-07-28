@@ -8,11 +8,13 @@ import { Product } from '../../interface/Product';
 export interface Cart {
   map: any;
   cart: Product[]
+  qty: number;
 }
 
 const initialState: Cart = {
   cart: [],
   map: undefined,
+  qty: 0,
 };
 
 export const counterSlice = createSlice({
@@ -26,7 +28,12 @@ export const counterSlice = createSlice({
       state.cart = [...state.cart, action.payload];
     },
     deleteItem: (state, action) => {
-      state.cart = [...state.cart, action.payload];
+      state.cart = state.cart.map((product) => (product.id === action.payload
+        ? {
+          ...product,
+          qty: product.qty - 1,
+        }
+        : product));
     },
     deleteIte: (state, action) => {
       state.cart = [...state.cart, action.payload];

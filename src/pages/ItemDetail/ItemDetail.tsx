@@ -22,6 +22,7 @@ const ItemDetail = () => {
     img: '',
     name: '',
     price: 0,
+
   });
 
   const addProduct = () => {

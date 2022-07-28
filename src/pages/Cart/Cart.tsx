@@ -1,18 +1,23 @@
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
 import React from 'react';
-
-// import { myShoppingCart } from '../../Data/myShoppingCart';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 // import { Product } from '../../interface/Product';
+import { deleteItem } from '../../store/reducers/cartReducer';
 import { RootState } from '../../store';
 
 import './shoppingCart.scss';
 
 const Cart = () => {
+  const dispatch = useDispatch();
   const cart = useSelector((state: RootState) => state.cart.cart);
   // const token = JSON.parse(localStorage.getItem('token'));
   console.log('bien', cart.cart);
+
+  const lessQuantity = () => {
+    dispatch(deleteItem());
+  };
+
   return (
     <div className="cart">
       <div className="cart__header">Carrito</div>
@@ -30,7 +35,12 @@ const Cart = () => {
                     {product.price}
                   </div>
                   <div className="cart__shoppingCart__product__detail__totalProduct__amount">
-                    <span className="cart__shoppingCart__product__detail__totalProduct__amount__less">-</span>
+                    <span
+                      className="cart__shoppingCart__product__detail__totalProduct__amount__less"
+                      onClick={lessQuantity}
+                    >
+                      -
+                    </span>
                     <span
                       className="cart__shoppingCart__product__detail__totalProduct__amount__number"
                     >
@@ -53,3 +63,6 @@ const Cart = () => {
 };
 
 export default Cart;
+function deleteItem(): any {
+  throw new Error('Function not implemented.');
+}
